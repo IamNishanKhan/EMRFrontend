@@ -28,7 +28,7 @@ export default function Login({ setIsAuthenticated }: LoginProps) {
     <main className="flex-1 flex flex-col items-center justify-center p-3 sm:p-4 md:p-6 lg:p-8">
       <div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl p-4 sm:p-6 md:p-8 w-full max-w-[95%] sm:max-w-[85%] md:max-w-md transition-colors duration-200">
         <div className="text-center mb-4 sm:mb-6 md:mb-8">
-          <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-800 dark:text-white">Portal Login</h2>
+          <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-800 dark:text-white">EMR Login</h2>
           <p className="text-xs sm:text-sm md:text-base text-gray-600 dark:text-gray-300 mt-1 sm:mt-2">
             Please enter your credentials to continue
           </p>

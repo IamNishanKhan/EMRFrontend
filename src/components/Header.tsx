@@ -35,15 +35,15 @@ export default function Header({
           <img
             src={icon}
             alt="North South University Logo"
-            className="w-[22px] h-[30px]"
+            className="w-[30px] h-[30px]"
           />
           <div className="flex flex-col">
             <h1 className="text-[13px] font-bold leading-none text-gray-800 dark:text-gray-200">
-              North South University
+              EMR Management
             </h1>
             <div className="flex flex-col text-[9px] leading-[11px] text-gray-600 dark:text-gray-400">
-              <span>Center of Excellence in Higher Education</span>
-              <span>First Private University in Bangladesh</span>
+              <span>Excellence in Medication</span>
+              <span>Hospital Management System</span>
             </div>
           </div>
         </div>
@@ -70,15 +70,6 @@ export default function Header({
               </button>
               {showProfileMenu && (
                 <div className="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg py-1 ring-1 ring-black ring-opacity-5">
-                  <button
-                    onClick={() => {
-                      setShowProfileMenu(false);
-                      navigate("/change-password");
-                    }}
-                    className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 w-full text-left"
-                  >
-                    Change Password
-                  </button>
                   <button
                     onClick={handleLogout}
                     className="block px-4 py-2 text-sm text-red-600 dark:text-red-400 hover:bg-gray-100 dark:hover:bg-gray-700 w-full text-left"

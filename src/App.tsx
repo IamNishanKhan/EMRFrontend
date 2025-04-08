@@ -4,17 +4,13 @@ import {
   Routes,
   Route,
   Navigate,
-  useNavigate,
-  useLocation,
 } from "react-router-dom";
 import Cookies from "js-cookie";
 import Header from "./components/Header";
 import { Menu } from "lucide-react";
 import Sidebar from "./components/Sidebar";
 import Dashboard from "./pages/Dashboard";
-import StudentInfo from "./pages/StudentInfo";
 import Login from "./pages/Login";
-import ChangePassword from "./pages/ChangePassword";
 
 export default function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -142,26 +138,6 @@ export default function App() {
                 element={
                   isAuthenticated ? (
                     <Dashboard />
-                  ) : (
-                    <Navigate to="/login" replace />
-                  )
-                }
-              />
-              <Route
-                path="/student-info"
-                element={
-                  isAuthenticated ? (
-                    <StudentInfo />
-                  ) : (
-                    <Navigate to="/login" replace />
-                  )
-                }
-              />
-              <Route
-                path="/change-password"
-                element={
-                  isAuthenticated ? (
-                    <ChangePassword />
                   ) : (
                     <Navigate to="/login" replace />
                   )

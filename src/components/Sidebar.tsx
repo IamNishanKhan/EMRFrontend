@@ -2,19 +2,8 @@ import React, { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import {
   ChevronDown,
-  GraduationCap,
-  BookOpen,
+  LayoutDashboard,
   ClipboardList,
-  CreditCard,
-  Clock,
-  Star,
-  BookMarked,
-  Award,
-  Wrench,
-  XCircle,
-  MessageSquare,
-  FileText,
-  UserIcon,
 } from "lucide-react";
 
 interface NavItem {
@@ -37,93 +26,18 @@ export default function Sidebar({ isOpen, onToggle }: SidebarProps) {
   const navItems: NavItem[] = [
     {
       label: "Dashboard",
-      icon: <GraduationCap className="w-5 h-5" />,
+      icon: <LayoutDashboard className="w-5 h-5" />,
       path: "/dashboard",
     },
     {
-      label: "Profile",
-      icon: <UserIcon className="w-5 h-5" />,
-      children: [
-        { label: "Student Info", path: "/student-info" },
-        { label: "Change Password", path: "/change-password" },
-        { label: "Major Declaration", path: "/major-declaration" },
-      ],
-    },
-    {
-      label: "Advising",
-      icon: <BookOpen className="w-5 h-5" />,
-      children: [
-        { label: "Advising Window", path: "/advising/window" },
-        { label: "Pre-Advising", path: "/advising/pre" },
-        { label: "Advising Pay Slip", path: "/advising/payslip" },
-      ],
-    },
-    {
-      label: "Grades",
+      label: "Prescriptions",
       icon: <ClipboardList className="w-5 h-5" />,
-      children: [{ label: "Grades History", path: "/grades/history" }],
-    },
-    {
-      label: "Payments",
-      icon: <CreditCard className="w-5 h-5" />,
       children: [
-        { label: "Account Status", path: "/payments/status" },
-        { label: "Online Payment History", path: "/payments/history" },
+        { label: "Patient Queue", path: "/patient-queue" },
+        { label: "Create New Prescription", path: "/prescriptions-create" },
+        { label: "Previous Prescriptions", path: "/prescriptions-view" },
+        { label: "Patient Reports", path: "/patient-reports" },
       ],
-    },
-    {
-      label: "Attendance",
-      icon: <Clock className="w-5 h-5" />,
-      path: "/attendance",
-    },
-    {
-      label: "Faculty Evaluation",
-      icon: <Star className="w-5 h-5" />,
-      path: "/faculty-evaluation",
-    },
-    {
-      label: "Curriculum",
-      icon: <BookMarked className="w-5 h-5" />,
-      path: "/curriculum",
-    },
-    {
-      label: "Degree",
-      icon: <Award className="w-5 h-5" />,
-      children: [
-        { label: "Academic Progress", path: "/degree/progress" },
-        { label: "Guideline", path: "/degree/guideline" },
-      ],
-    },
-    {
-      label: "Service",
-      icon: <Wrench className="w-5 h-5" />,
-      children: [
-        { label: "Academic Documents", path: "/service/documents" },
-        { label: "Car Parking", path: "/service/parking" },
-        { label: "Course Exclusion", path: "/service/exclusion" },
-        { label: "ID Unlock", path: "/service/id-unlock" },
-        { label: "Leave Request", path: "/service/leave" },
-        { label: "Resource Center Payment", path: "/service/resource-payment" },
-        { label: "RFID Card and Ribbon", path: "/service/rfid" },
-        { label: "Semester Drop", path: "/service/semester-drop" },
-        { label: "Waiver Course Issue", path: "/service/waiver" },
-        { label: "Application Status", path: "/service/status" },
-      ],
-    },
-    {
-      label: "Course Drop",
-      icon: <XCircle className="w-5 h-5" />,
-      path: "/course-drop",
-    },
-    {
-      label: "SMS History",
-      icon: <MessageSquare className="w-5 h-5" />,
-      path: "/sms-history",
-    },
-    {
-      label: "Course Request",
-      icon: <FileText className="w-5 h-5" />,
-      path: "/course-request",
     },
   ];
 
